@@ -1,6 +1,7 @@
 // Inclusao dos pacotes
 const express = require("express");
 const mysql = require("mysql2");
+const axios = require("axios");
 
 // Instancia o express
 const app = express();
@@ -18,9 +19,19 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
+// Buscar CEP via API externa - ViaCEP
+let cep = "51030340";
+axios
+  .get("https://viacep.com.br/ws/" + cep + "/json/")
+  .then(function (res) {
+    console.log(res.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
 // Servico de busca de usuarios cadastrados
 app.get("/users", (req, res) => {
-  // Busca usuários
   connection.query("SELECT * FROM users_db.user", function (err, rows, fields) {
     if (err) throw err;
 
