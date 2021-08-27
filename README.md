@@ -14,3 +14,14 @@ Projeto desenvolvido como parte do treinamento online Start Tech da [Gama Academ
 Para iniciar Servidor >> `nodemon index.js`
 
 5. Conectar com banco de dados MySQL
+6. Comunicar com API esterna ViaCEP
+
+-- Branch: test-mongodb --
+
+7. Conectar com banco de dados MongoDB utilizando mongoose
+8. Criar schema e controller para cadastro de novos usuários
+9. Criar rota para cadastro de usuário
+10. Instalar swagger-ui-express e criar rota para acesso à documentação
+
+
+*** Atualizar: swagger, UserSchema
