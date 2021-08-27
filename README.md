@@ -1,5 +1,5 @@
 # Projeto: Banco de Currículos
-Projeto desenvolvido como parte do treinamento online Start Tech da [Gama Academy](https://www.gama.academy/).
+Projeto desenvolvido como parte do treinamento online Start Tech da [Gama Academy](https://www.gama.academy/). O objetivo é desenvolver uma página para em empresa fictícia, JobsNET, para cadastro de profissionais para conectar as oportunidades de emprego.
 
 ## Etapas do Projeto
 
