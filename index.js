@@ -12,7 +12,7 @@ app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 app.use(routes);
 
 // Definicao de porta
-const port = 80;
+const PORT = process.env.PORT || 3000;
 
 // Conexão com banco de dados
 mongoose.connect("mongodb+srv://admin-cassia:gamadb@cluster0.uysjc.mongodb.net/test", { useNewUrlParser: true });
@@ -28,25 +28,7 @@ axios
     console.log(error);
   });
 
-// Servico de busca de usuarios cadastrados
-// app.get("/users", (req, res) => {
-//   connection.query("SELECT * FROM users_db.user", function (err, rows, fields) {
-//     if (err) throw err;
-
-//     res.send(rows);
-//   });
-// });
-
-// Servico de busca de usuarios por CPF
-// app.get("/users/:cpf", (req, res) => {
-//   connection.query("SELECT nome FROM users_db.user WHERE cpf = " + req.params.cpf, function (err, rows, fields) {
-//     if (err) throw err;
-
-//     res.send(rows);
-//   });
-// });
-
 // Subindo servidor Node
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`App listening at http://localhost:${PORT}`);
 });
