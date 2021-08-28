@@ -12,7 +12,7 @@ app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 app.use(routes);
 
 // Definicao de porta
-const port = 3000;
+const port = 80;
 
 // Conexão com banco de dados
 mongoose.connect("mongodb+srv://admin-cassia:gamadb@cluster0.uysjc.mongodb.net/test", { useNewUrlParser: true });
