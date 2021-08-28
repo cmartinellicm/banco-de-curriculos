@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API do banco de curriculos JobsNET",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "curriculos",
+    "profissionais"
+  ],
+  "author": "Cassia Martinelli",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.2",
+    "nodemon": "^2.0.12",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
