@@ -22,10 +22,16 @@ module.exports = {
     newUser.cidade = cidade;
     newUser.estado = estado;
 
+    User.findOne({ cpf: newUser.cpf }, "nome", function (err, user) {
+      if (err) return res.status(500).send("DB error");
+      if (user) {
+        return res.status(401).send("Usuário já existe");
+      }
+    });
+
     newUser.save((err, savedUser) => {
       if (err) {
-        console.log(err);
-        return res.status(500).send();
+        return res.status(400).send("Campos obrigatórios não preenchidos");
       }
       return res.status(200).send(savedUser);
     });
