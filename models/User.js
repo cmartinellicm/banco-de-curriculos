@@ -4,7 +4,7 @@ const UserSchema = new mongoose.Schema(
   {
     nome: { type: String, required: true },
     cpf: { type: String, unique: true, required: true },
-    email: { type: String, unique: true, required: true },
+    email: { type: String, required: true },
 
     cargo: { type: String, required: true },
 
@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
 
     cep: { type: String, required: true },
     logradouro: { type: String, required: true },
-    numero: { type: Number, required: true },
+    numero: { type: String, required: true },
     bairro: { type: String, required: true },
     cidade: { type: String, required: true },
     estado: { type: String, required: true },
