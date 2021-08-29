@@ -22,6 +22,7 @@ module.exports = {
     newUser.cidade = cidade;
     newUser.estado = estado;
 
+    // Verifica se já existe CPF cadastrado
     User.findOne({ cpf: newUser.cpf }, "nome", function (err, user) {
       if (err) return res.status(500).send("DB error");
       if (user) {
@@ -29,6 +30,7 @@ module.exports = {
       }
     });
 
+    // Salva novo usuário no banco de dados
     newUser.save((err, savedUser) => {
       if (err) {
         return res.status(400).send("Campos obrigatórios não preenchidos");
