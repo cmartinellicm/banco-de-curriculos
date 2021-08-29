@@ -96,8 +96,7 @@
           "type": "string"
         },
         "numero": {
-          "type": "integer",
-          "format": "int32"
+          "type": "string"
         },
         "bairro": {
           "type": "string"
